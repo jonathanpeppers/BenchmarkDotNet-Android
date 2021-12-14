@@ -60,7 +60,7 @@ namespace SharedBenchmarks
                 config.UnionRule = ConfigUnionRule.AlwaysUseGlobal; // Overriding the default
                 config.AddLogger(logger);
 
-                BenchmarkRunner.Run<MathBenchmark>(config.WithOptions(ConfigOptions.DisableLogFile));
+                BenchmarkRunner.Run<LiteDbBenchmark>(config.WithOptions(ConfigOptions.DisableLogFile));
                 success = true;
             }
             catch (Exception ex)
