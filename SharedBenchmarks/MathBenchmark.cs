@@ -11,14 +11,15 @@ namespace SharedBenchmarks
 	[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 	public class MathBenchmark
 	{
-		readonly float[] data = new float[1024];
+		const int length = 1024;
+		readonly float[] data = new float[length];
 		readonly Random random = new Random();
 
 		[Benchmark]
 		public void RandomNext()
 		{
 			double value = 300;
-			for (int i = 0; i < 200000; i++)
+			for (int i = 0; i < length; i++)
 			{
 				if (random.NextDouble() > .5)
 				{

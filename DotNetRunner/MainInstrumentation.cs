@@ -15,7 +15,7 @@ namespace SharedBenchmarks
     [Instrumentation(Name = "com.dotnet.MainInstrumentation")]
     public class MainInstrumentation : Instrumentation
     {
-        const string Tag = "MAUI";
+        const string Tag = "DOTNET";
 
         protected MainInstrumentation(IntPtr handle, JniHandleOwnership transfer)
             : base(handle, transfer) { }
