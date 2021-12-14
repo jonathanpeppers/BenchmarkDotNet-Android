@@ -12,9 +12,9 @@ To run the benchmarks with "classic" Xamarin.Android:
 
 ## Results
 
-An example of running `MathBenchmark.cs` on a Pixel 6 Pro device:
+An example of running `LiteDbBenchmark.cs` on a Pixel 6 Pro device:
 
 |              Method |     Mean |   Error |  StdDev |   Gen 0 |  Gen 1 |  Gen 2 | Allocated |
 |-------------------- |---------:|--------:|--------:|--------:|-------:|-------:|----------:|
-| .NET 6  EnsureIndex | 553.8 µs | 4.89 µs | 4.33 µs | 11.7188 | 5.8594 | 5.8594 |    134 KB |
-| Xamarin EnsureIndex | 692.0 µs | 4.77 µs | 4.46 µs | 14.6484 | 6.8359 | 6.8359 |         - |
+| .NET 6  EnsureIndex | 798.5 µs | 4.18 µs | 3.70 µs | 11.7188 | 5.8594 | 5.8594 |    152 KB |
+| Xamarin EnsureIndex | 893.7 µs | 3.65 µs | 3.41 µs | 14.6484 | 6.8359 | 6.8359 |         - |
