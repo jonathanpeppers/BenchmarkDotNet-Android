@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">.NET 6 Benchmarks</string>
+    <string name="app_text">See the README.md</string>
+</resources>

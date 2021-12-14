@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedBenchmarks", "SharedBenchmarks\SharedBenchmarks.csproj", "{5303B928-6905-4344-A400-1DAF66775887}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinRunner", "XamarinRunner\XamarinRunner.csproj", "{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetRunner", "DotNetRunner\DotNetRunner.csproj", "{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5303B928-6905-4344-A400-1DAF66775887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5303B928-6905-4344-A400-1DAF66775887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5303B928-6905-4344-A400-1DAF66775887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5303B928-6905-4344-A400-1DAF66775887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AEC138-CB79-46EC-A8A2-C2E8F2D61006}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F051144-8BA8-40B6-8AC0-212E7CB80DE0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E41FA779-B16E-4D08-B97B-4F2CD0ACE4FE}
+	EndGlobalSection
+EndGlobal
