@@ -14,7 +14,7 @@ To run the benchmarks with "classic" Xamarin.Android:
 
 An example of running `LiteDbBenchmark.cs` on a Pixel 6 Pro device:
 
-|              Method |     Mean |   Error |  StdDev |   Gen 0 |  Gen 1 |  Gen 2 | Allocated |
-|-------------------- |---------:|--------:|--------:|--------:|-------:|-------:|----------:|
-| .NET 6  EnsureIndex | 798.5 µs | 4.18 µs | 3.70 µs | 11.7188 | 5.8594 | 5.8594 |    152 KB |
-| Xamarin EnsureIndex | 893.7 µs | 3.65 µs | 3.41 µs | 14.6484 | 6.8359 | 6.8359 |         - |
+|              Method |     Mean | Error | Allocated |
+|-------------------- |---------:|------:|----------:|
+| .NET 6  EnsureIndex | 295.2 ms |    NA |    157 KB |
+| Xamarin EnsureIndex | 224.0 ms |    NA |         - |
