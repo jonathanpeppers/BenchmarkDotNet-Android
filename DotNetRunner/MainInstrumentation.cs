@@ -1,8 +1,10 @@
-﻿using Android.App;
+﻿//#define COLD_START
+using Android.App;
 using Android.OS;
 using Android.Runtime;
 using Android.Util;
 using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Engines;
 using BenchmarkDotNet.Jobs;
 using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Running;
@@ -56,7 +58,15 @@ namespace SharedBenchmarks
                     config.AddValidator(v);
                 foreach (var p in baseConfig.GetColumnProviders())
                     config.AddColumnProvider(p);
+#if COLD_START
+                var job = JobMode<Job>.Default
+                    .WithToolchain(new InProcessEmitToolchain(TimeSpan.FromMinutes(10), logOutput: true))
+                    .WithIterationCount(1)
+                    .WithStrategy(RunStrategy.ColdStart);
+                config.AddJob(job);
+#else
                 config.AddJob(JobMode<Job>.Default.WithToolchain(new InProcessEmitToolchain(TimeSpan.FromMinutes(10), logOutput: true)));
+#endif
                 config.UnionRule = ConfigUnionRule.AlwaysUseGlobal; // Overriding the default
                 config.AddLogger(logger);
 
