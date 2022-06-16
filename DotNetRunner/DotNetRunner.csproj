@@ -7,6 +7,8 @@
     <ApplicationId>com.dotnet.dotnetrunner</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <!-- Disabled AOT to match Xamarin.Android app configuration -->
+    <RunAOTCompilation>false</RunAOTCompilation>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
