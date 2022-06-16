@@ -10,8 +10,15 @@
     <!-- Disabled AOT to match Xamarin.Android app configuration -->
     <RunAOTCompilation>false</RunAOTCompilation>
   </PropertyGroup>
+  <PropertyGroup>
+    <AndroidUseDefaultAotProfile>false</AndroidUseDefaultAotProfile>
+  </PropertyGroup>
+  <ItemGroup>
+    <AndroidAotProfile Include="custom.aprof" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+    <PackageReference Include="Mono.AotProfiler.Android" Version="6.0.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharedBenchmarks\SharedBenchmarks.csproj" />

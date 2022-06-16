@@ -1,5 +1,7 @@
 using Android.App;
 using Android.OS;
+using System;
+using System.Text.RegularExpressions;
 
 namespace DotNetRunner
 {
@@ -9,6 +11,9 @@ namespace DotNetRunner
         protected override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            _ = DateTimeOffset.Now;
+            _ = new Regex(@"([^;=]+)=([^;]+)(?:;\s*)?", RegexOptions.Compiled);
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.activity_main);
