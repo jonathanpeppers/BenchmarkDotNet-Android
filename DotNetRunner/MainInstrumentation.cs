@@ -60,7 +60,16 @@ namespace SharedBenchmarks
                 config.UnionRule = ConfigUnionRule.AlwaysUseGlobal; // Overriding the default
                 config.AddLogger(logger);
 
-                BenchmarkRunner.Run<MathBenchmark>(config.WithOptions(ConfigOptions.DisableLogFile));
+                var types = new[]
+                {
+                    typeof (MathBenchmark),
+                    typeof (DateTimeOffsetBenchmark),
+                    typeof (RegexBenchmarks),
+                };
+                foreach (var type in types)
+                {
+                    BenchmarkRunner.Run(type, config.WithOptions(ConfigOptions.DisableLogFile));
+                }
                 success = true;
             }
             catch (Exception ex)
