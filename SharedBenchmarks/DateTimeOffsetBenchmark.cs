@@ -13,4 +13,7 @@ public class DateTimeOffsetBenchmark
 {
     [Benchmark]
     public void Now() => _ = DateTimeOffset.Now;
+
+    [Benchmark]
+    public void UtcNow() => _ = DateTimeOffset.UtcNow;
 }

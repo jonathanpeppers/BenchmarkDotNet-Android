@@ -14,14 +14,16 @@ To run the benchmarks with "classic" Xamarin.Android:
 
 An example of running all 3 benchmarks on a Pixel 5 device:
 
-|                     Method |      Mean |     Error |    StdDev | Allocated |
-|--------------------------- |----------:|----------:|----------:|----------:|
-| .NET 6  Random.Next        |  65.90 μs | 0.0720 μs | 0.0640 μs |         - |
-| Xamarin Random.Next        |  84.55 μs | 0.0280 μs | 0.0260 μs |         - |
-| .NET 6  DateTimeOffset.Now |   1.05 μs | 0.0016 μs | 0.0015 μs |         - |
-| Xamarin DateTimeOffset.Now |   4.94 μs | 0.0050 μs | 0.0046 μs |         - |
-| .NET 6  Regex Compiled     | 134.70 μs | 3.0500 μs | 8.7600 μs |     20 KB |
-| Xamarin Regex Compiled     |  16.49 μs | 0.1990 μs | 0.1760 μs |         - |
+|                 Method |      Mean |     Error |    StdDev | Allocated |
+|----------------------- |----------:|----------:|----------:|----------:|
+| .NET 6  Random.Next    |  65.90 μs | 0.0720 μs | 0.0640 μs |         - |
+| Xamarin Random.Next    |  84.55 μs | 0.0280 μs | 0.0260 μs |         - |
+| .NET 6  DTO.Now        |   1.05 μs | 0.0016 μs | 0.0015 μs |         - |
+| Xamarin DTO.Now        |   4.94 μs | 0.0050 μs | 0.0046 μs |         - |
+| .NET 6  DTO.UtcNow     |   0.20 μs | 0.1100 ns | 0.0900 ns |         - |
+| Xamarin DTO.UtcNow     |   0.22 μs | 0.0700 ns | 0.0600 ns |         - |
+| .NET 6  Regex Compiled | 134.70 μs | 3.0500 μs | 8.7600 μs |     20 KB |
+| Xamarin Regex Compiled |  16.49 μs | 0.1990 μs | 0.1760 μs |         - |
 
 *Note that `RegexOptions.Compiled` doesn't do anything in Xamarin.Android or mono/mono.*
 
