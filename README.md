@@ -21,7 +21,7 @@ An example of running benchmarks on a Pixel 5 device:
 | .NET 8  | ContructorInfo_Invoke |  62.8 ns |  1.88 ns |  5.46 ns |      16 B |
 | .NET 8  |     MethodInfo_Invoke | 300.5 ns |  0.72 ns |  0.64 ns |         - |
 
-If you rerun with `-p:ColdStart=true`, you'll see the issue we'll have on mobile:
+If you rerun with `-p:ColdStart=true`, this will simulate the cost at startup:
 
 | Version |                Method |       Mean | Allocated |
 | ---     |---------------------- |-----------:|----------:|
