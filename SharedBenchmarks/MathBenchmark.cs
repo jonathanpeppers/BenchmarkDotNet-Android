@@ -1,5 +1,4 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Order;
 using System;
 
 namespace SharedBenchmarks;
@@ -7,8 +6,6 @@ namespace SharedBenchmarks;
 /// <summary>
 /// Based on: https://github.com/dotnet/maui/issues/3100
 /// </summary>
-[MemoryDiagnoser]
-[Orderer(SummaryOrderPolicy.FastestToSlowest)]
 public class MathBenchmark
 {
 	const int length = 1024;
