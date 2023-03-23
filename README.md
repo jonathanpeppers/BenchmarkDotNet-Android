@@ -6,21 +6,26 @@ To run the benchmarks with .NET 7:
 
     dotnet build ./DotNetRunner/DotNetRunner.csproj -c Release -t:Benchmark
 
-To run the benchmarks with "classic" Xamarin.Android:
+To run the benchmarks with .NET 8:
 
-    msbuild ./XamarinRunner/XamarinRunner.csproj -restore -p:Configuration=Release -t:Benchmark
+    dotnet build ./DotNetRunner/DotNetRunner.csproj -c Release -t:Benchmark -p:Targeting=net8.0
 
 ## Results
 
 An example of running benchmarks on a Pixel 5 device:
 
-|                Method |     Mean |   Error |  StdDev | Allocated |
-|---------------------- |---------:|--------:|--------:|----------:|
-| ContructorInfo_Invoke | 279.7 ns | 1.63 ns | 1.81 ns |      16 B |
-|     MethodInfo_Invoke | 448.8 ns | 0.62 ns | 0.58 ns |         - |
+| Version |                Method |     Mean |    Error |   StdDev | Allocated |
+| ---     |---------------------- |---------:|---------:|---------:|----------:|
+| .NET 7  | ContructorInfo_Invoke | 328.5 ns | 14.81 ns | 42.98 ns |      16 B |
+| .NET 7  |     MethodInfo_Invoke | 479.2 ns |  1.36 ns |  1.21 ns |         - |
+| .NET 8  | ContructorInfo_Invoke |  62.8 ns |  1.88 ns |  5.46 ns |      16 B |
+| .NET 8  |     MethodInfo_Invoke | 300.5 ns |  0.72 ns |  0.64 ns |         - |
 
-*Note that `RegexOptions.Compiled` doesn't do anything in Xamarin.Android or mono/mono.*
+If you rerun with `-p:ColdStart=true`, you'll see the issue we'll have on mobile:
 
-If you uncomment `#define COLD_START` in `MainInstrumentation.cs` and rerun:
-
-
+| Version |                Method |       Mean | Allocated |
+| ---     |---------------------- |-----------:|----------:|
+| .NET 7  | ContructorInfo_Invoke |   628.4 us |     552 B |
+| .NET 7  |     MethodInfo_Invoke | 1,081.1 us |     800 B |
+| .NET 8  | ContructorInfo_Invoke |   777.0 us |   4.98 KB |
+| .NET 8  |     MethodInfo_Invoke |   961.3 us |   2.38 KB |

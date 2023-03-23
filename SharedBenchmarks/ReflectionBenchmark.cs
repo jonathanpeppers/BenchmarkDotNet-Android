@@ -8,7 +8,7 @@ public class ReflectionBenchmark
 {
 	readonly ConstructorInfo ctor = typeof(MyType).GetConstructor(Type.EmptyTypes);
 	readonly MethodInfo method = typeof(MyType).GetMethod("MyMethod");
-	readonly MyType myObject = new MyType();
+	readonly MyType myObject = new();
 
 	[Benchmark]
 	public void ContructorInfo_Invoke() => ctor.Invoke(null);
