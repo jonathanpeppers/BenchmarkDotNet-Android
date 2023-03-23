@@ -57,9 +57,7 @@ namespace SharedBenchmarks
 
                 var types = new[]
                 {
-                    typeof (MathBenchmark),
-                    typeof (DateTimeOffsetBenchmark),
-                    typeof (RegexBenchmarks),
+                    typeof (ReflectionBenchmark)
                 };
                 foreach (var type in types)
                 {
