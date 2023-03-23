@@ -2,9 +2,13 @@
 
 BenchmarkDotNet projects for comparing .NET 7 to Xamarin.Android
 
-To run the benchmarks with .NET 7:
+To run the benchmarks with .NET 7 (default):
 
     dotnet build ./DotNetRunner/DotNetRunner.csproj -c Release -t:Benchmark
+
+To run the benchmarks with .NET 8:
+
+    dotnet build ./DotNetRunner/DotNetRunner.csproj -c Release -t:Benchmark -p:Targeting=net8.0
 
 To run the benchmarks with "classic" Xamarin.Android:
 
