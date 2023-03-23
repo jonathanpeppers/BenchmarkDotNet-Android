@@ -1,8 +1,8 @@
 # BenchmarkDotNet-Android
 
-BenchmarkDotNet projects for comparing .NET 6 to Xamarin.Android
+BenchmarkDotNet projects for comparing .NET 7 to Xamarin.Android
 
-To run the benchmarks with .NET 6:
+To run the benchmarks with .NET 7:
 
     dotnet build ./DotNetRunner/DotNetRunner.csproj -c Release -t:Benchmark
 
