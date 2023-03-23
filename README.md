@@ -31,7 +31,7 @@ An example of running all 3 benchmarks on a Pixel 5 device:
 
 *Note that `RegexOptions.Compiled` doesn't do anything in Xamarin.Android or mono/mono.*
 
-If you uncomment `#define COLD_START` in `MainInstrumentation.cs` and rerun:
+If you rerun with `-p:ColdStart=true`, this will simulate the cost at startup:
 
 |                     Method |      Mean | Allocated |
 |--------------------------- |----------:|----------:|
