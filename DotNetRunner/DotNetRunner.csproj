@@ -8,12 +8,10 @@
     <ApplicationId>com.dotnet.dotnetrunner</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-    <!-- Disabled AOT to match Xamarin.Android app configuration -->
-    <RunAOTCompilation>false</RunAOTCompilation>
     <DefineConstants Condition="'$(ColdStart)' == 'true'">$(DefineConstants);COLD_START</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.5" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.5.2136" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SharedBenchmarks\SharedBenchmarks.csproj" />

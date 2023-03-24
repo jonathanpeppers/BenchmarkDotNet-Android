@@ -1,8 +1,6 @@
 <Project>
   <PropertyGroup>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
-    <!-- HACK: to workaround System.IO.FileNotFoundException: /System.Private.CoreLib.dll -->
-    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <!-- HACK: to workaround error XALNK7000: Mono.Linker.MarkException: Error processing method: 'System.Collections.IEnumerator Dia2Lib. IDiaEnumTables::GetEnumerator()' in assembly: 'Dia2Lib.dll' -->
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
