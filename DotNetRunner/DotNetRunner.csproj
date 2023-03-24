@@ -8,6 +8,8 @@
     <ApplicationId>com.dotnet.dotnetrunner</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <!-- Disabled AOT to match Xamarin.Android app configuration -->
+    <RunAOTCompilation>false</RunAOTCompilation>
     <DefineConstants Condition="'$(ColdStart)' == 'true'">$(DefineConstants);COLD_START</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
