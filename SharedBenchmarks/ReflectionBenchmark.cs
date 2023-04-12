@@ -13,8 +13,11 @@ public class ReflectionBenchmark
 	[Benchmark]
 	public void ContructorInfo_Invoke() => ctor.Invoke(null);
 
-    [Benchmark]
+	[Benchmark]
 	public void MethodInfo_Invoke() => method.Invoke(myObject, null);
+
+	[Benchmark]
+	public void DelegateInfo_Invoke() => Delegate.CreateDelegate(typeof(Action), myObject, "MyMethod");
 
 	class MyType
 	{
