@@ -18,6 +18,7 @@ To run the benchmarks with "classic" Xamarin.Android:
 
 An example of running `TextViewBenchmark` on a Pixel 5 device:
 
-|  Method |     Mean |     Error |    StdDev | Allocated |
-|-------- |---------:|----------:|----------:|----------:|
-| SetText | 7.588 us | 0.0088 us | 0.0078 us |     112 B |
+|         Method |     Mean |     Error |    StdDev | Allocated |
+|--------------- |---------:|----------:|----------:|----------:|
+| Before SetText | 7.588 us | 0.0088 us | 0.0078 us |     112 B |
+| After  SetText | 1.814 us | 0.0009 us | 0.0009 us |         - |
