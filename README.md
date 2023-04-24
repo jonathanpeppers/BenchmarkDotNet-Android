@@ -16,9 +16,38 @@ To run the benchmarks with "classic" Xamarin.Android:
 
 ## Results
 
-An example of running `TextViewBenchmark` on a Pixel 5 device:
+An example of running `StringBenchmark` on a Pixel 5 device, before and
+after [java.interop#1101](https://github.com/xamarin/java.interop/pull/1101).
 
-|         Method |     Mean |     Error |    StdDev | Allocated |
-|--------------- |---------:|----------:|----------:|----------:|
-| Before SetText | 7.588 us | 0.0088 us | 0.0078 us |     112 B |
-| After  SetText | 1.814 us | 0.0009 us | 0.0009 us |         - |
+|              Method |     Mean |     Error |    StdDev | Allocated |
+|-------------------- |---------:|----------:|----------:|----------:|
+| Before SetFinalText | 6.632 us | 0.0101 us | 0.0079 us |     112 B |
+| Before SetText      | 6.672 us | 0.0116 us | 0.0103 us |     112 B |
+
+The generate C# code before:
+
+```csharp
+public string? FinalText {
+    get { return FinalTextFormatted == null ? null : FinalTextFormatted.ToString (); }
+    set {
+        var jls = value == null ? null : new global::Java.Lang.String (value);
+        FinalTextFormatted = jls;
+        if (jls != null) jls.Dispose ();
+    }
+}
+
+public string? Text {
+    get { return TextFormatted == null ? null : TextFormatted.ToString (); }
+    set {
+        var jls = value == null ? null : new global::Java.Lang.String (value);
+        TextFormatted = jls;
+        if (jls != null) jls.Dispose ();
+    }
+}
+```
+
+The generated C# after:
+
+```csharp
+
+```

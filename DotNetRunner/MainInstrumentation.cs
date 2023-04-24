@@ -57,7 +57,7 @@ namespace SharedBenchmarks
 
                 var types = new[]
                 {
-                    typeof (TextViewBenchmark),
+                    typeof (StringBenchmark),
                 };
                 foreach (var type in types)
                 {

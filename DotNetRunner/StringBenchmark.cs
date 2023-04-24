@@ -5,7 +5,7 @@ using Hello;
 
 namespace SharedBenchmarks;
 
-public class TextViewBenchmark
+public class StringBenchmark
 {
 	readonly HelloClass hello = new();
 
