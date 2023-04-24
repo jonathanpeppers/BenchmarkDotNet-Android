@@ -1,14 +1,17 @@
 ﻿using BenchmarkDotNet.Attributes;
 using System;
 using Android.App;
-using Android.Widget;
+using Hello;
 
 namespace SharedBenchmarks;
 
 public class TextViewBenchmark
 {
-	readonly TextView textView = new TextView(Application.Context);
+	readonly HelloClass hello = new();
 
 	[Benchmark]
-	public void SetText() => textView.Text = "Hello World!";
+	public void SetText() => hello.Text = "Hello World!";
+
+	[Benchmark]
+	public void SetFinalText() => hello.FinalText = "Hello World!";
 }
